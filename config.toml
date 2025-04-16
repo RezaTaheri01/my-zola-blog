@@ -1,0 +1,128 @@
+# The URL the site will be built for
+base_url = "https://rezataheri.github.io"
+title = "About Reza"
+description = "Simple about me"
+default_language = "en"
+author = "RezaTaheri01"
+theme = "halve-z"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+minify_html = true
+generate_feeds = true
+generate_sitemap = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+taxonomies = [
+    { name = "categories", feed = true },
+    { name = "tags", feed = true },
+]
+
+[search]
+include_title = true
+include_description = true
+include_path = false
+include_content = true
+index_format = "elasticlunr_json"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+highlight_theme = "css"
+highlight_themes_css = [
+    { theme = "OneHalfDark", filename = "syntax-theme-dark.css" },
+    { theme = "OneHalfLight", filename = "syntax-theme-light.css" },
+]
+render_emoji = false
+external_links_target_blank = true
+
+[slugify]
+paths = "safe"
+taxonomies = "safe"
+anchors = "safe"
+
+[extra]
+locale = "en_US"
+logo = "icon-192x192.png"
+manifest = "manifest.json"
+read_time = true
+toc = true
+csp = true
+
+[extra.placeholders]
+tags = false
+subtitle = false
+
+[extra.home]
+title = "Reza"
+subtitle = "Python Developer"
+glitch = false
+logo = { enabled = false, height = "100", width = "100" }
+footer = true
+
+[extra.images]
+home = "c1tyh4ll.png" #https://failsafe.monster/c1tyh4ll.png
+post_list = "bk-prk.png" #https://failsafe.monster/bk-prk.jpg
+default_post = "bk-prk.png" #https://failsafe.monster/bk-prk.jpg
+categories = [
+    { name = "media", image = "https://raw.githubusercontent.com/bearcott/8bit-art/master/cities/urban.gif" },
+]
+
+[extra.menu]
+posts = false
+codes = false
+posts_label = "Posts"
+links = [
+    # { name = "Code", url = "/projects/" },
+]
+
+[extra.footer]
+enabled = true
+author = true
+copyright = true
+hash = true
+stack = true
+links = [
+    { name = "posts", url = "/posts/" },
+]
+
+[extra.social]
+email = "reza.taheri.pgmr@gmail.com"
+# mastodon = "server/@user_name"
+# twitter = "user_name"
+# facebook = "user_name"
+# codeberg = "username"
+github = "RezaTaheri01"
+# gitlab = "user_name"
+# bitbucket = "user_name"
+# stackoverflow = "12345/user_name"
+linkedin = "RezaTaheri01"
+# instagram = "user_name"
+# lastfm = "user_name"
+# twitch = "user_name"
+# reddit = "user_name"
+#flickr = "user_name"
+# keybase = "user_name"
+# hackernews = "user_name"
+
+[extra.comments]
+system = "none"
+
+[extra.comments.cactus]
+site = "site_name"
+page_size = 10
+guest_posting = true
+update_interval = 0
+
+[extra.comments.giscus]
+repo = "user_name/repo"
+repo_id = ""
+category = "Comments"
+category_id = ""
+mapping = "pathname"
+strict = "1"
+reactions = "1"
+lang = "en"
