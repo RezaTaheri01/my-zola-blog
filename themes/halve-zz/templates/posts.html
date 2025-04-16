@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block right %}
+    <div class="content">
+      {% block date %}{{ super() }}{% endblock date%}
+      <ul class="posts-list">
+        {% if section.pages %}
+          {% set posts = section.pages %}
+        {% elif paginator.pages %}
+          {% set posts = paginator.pages %}
+        {% endif %}
+        {% for page in posts %}
+          <li>
+            <h2>
+              <a href="{{ "/posts/" ~ page.slug ~ "/" | safe }}" class="post-title"><span>{{ page.title | safe }}</span></a>
+              <span class="date">{{ page.date | date(format="%d %b %Y") }}</span>
+            </h2>
+              {% if config.extra.read_time == true %}
+              <span class="word-count">{{ page.word_count ~ "w"}}</span>&nbsp;<span class="read-time">{{ page.reading_time ~ "m"}}</span>
+              {% endif %}
+            {% if page.extra.subtitle %}<p>{{ page.extra.subtitle | striptags | truncate(length=150) | safe }}</p>{% elif config.extra.placeholders.subtitle %}<p>~</p>{% endif %}
+            {% if page.taxonomies["tags"] %}
+            <ul class="tags title-tags"
+              {%- for tag in page.taxonomies["tags"] %}
+              ><li><a class="title-tag" href="/tags/{{ tag | slugify}}/">{{ tag }}</a></li
+                {%- if not loop.last -%}
+                {%- endif -%}
+              {% endfor %}
+            ></ul>
+            {% elif config.extra.placeholders.subtitle %}
+            <p>untagged</p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% block paginator %}
+      {{ super() }}
+    {% endblock paginator %}
+    </div>
+{% endblock right %}
