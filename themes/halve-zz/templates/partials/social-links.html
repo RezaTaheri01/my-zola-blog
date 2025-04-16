@@ -1,6 +1,6 @@
 <ul>
          {% if config.extra.social.email %}
-            <li><a class="social-btn" href="mailto:{{ config.extra.social.email }}" aria-label="E-Mail" target="_blank" rel="noopener noreferrer"><i class="nf nf-fa-envelope"></i></a></li>
+            <li><a class="social-btn" href="mailto:{{ config.extra.social.email }}" aria-label="E-Mail" target="_blank" rel="noopener noreferrer"><i class="fa fa-envelope"></i></a></li>
          {% endif %}
          {% if config.extra.social.mastodon %}
             <li><a class="social-btn" href="https://{{ config.extra.social.mastodon }}" aria-label="Mastodon" target="_blank" rel="noopener noreferrer"><i class="nf nf-fa-mastodon"></i></a></li>
@@ -18,7 +18,7 @@
             <li><a class="social-btn" href="https://plus.google.com/+{{ config.extra.social.google_plus }}" aria-label="Google Plus" target="_blank" rel="noopener noreferrer"><i class="nf nf-fa-google_plus"></i></a></li>
          {% endif %}
          {% if config.extra.social.linkedin %}
-            <li><a class="social-btn" href="https://linkedin.com/in/{{ config.extra.social.linkedin }}" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="nf nf-fa-linkedin"></i></a></li>
+            <li><a class="social-btn" href="https://linkedin.com/in/{{ config.extra.social.linkedin }}" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
          {% endif %}
          {% if config.extra.social.xing %}
             <li><a class="social-btn" href="https://www.xing.com/profile/{{ config.extra.social.xing }}" aria-label="Xing" target="_blank" rel="noopener noreferrer"><i class="nf nf-fa-xing"></i></a></li>
@@ -30,7 +30,7 @@
             <li><a class="social-btn" href="https://codeberg.org/{{ config.extra.social.codeberg }}" aria-label="Codeberg" target="_blank" rel="noopener noreferrer"><i class="nf nf-linux-codeberg"></i></a></li>
          {% endif %}
          {% if config.extra.social.github %}
-            <li><a class="social-btn" href="https://github.com/{{ config.extra.social.github }}" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="nf nf-fa-github"></i></a></li>
+            <li><a class="social-btn" href="https://github.com/{{ config.extra.social.github }}" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
          {% endif %}
          {% if config.extra.social.gitlab %}
             <li><a class="social-btn" href="https://gitlab.com/{{ config.extra.social.gitlab }}" aria-label="GitLab" target="_blank" rel="noopener noreferrer"><i class="nf nf-fa-gitlab"></i></a></li>
@@ -44,6 +44,19 @@
          {% if config.extra.social.stackoverflow %}
             <li><a class="social-btn" href="https://stackoverflow.com/users/{{ config.extra.social.stackoverflow }}" aria-label="Stack Overflow" target="_blank" rel="noopener noreferrer"><i class="nf nf-dev-stackoverflow"></i></a></li>
          {% endif %}
+
+         {% if config.extra.social.website %}
+         <li><a class="social-btn" href="{{ config.extra.social.website }}" aria-label="Website" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-blog"></i></a></li>
+         {% endif %}
+
+         {% if config.extra.social.telegram %}
+         <li><a class="social-btn" href="https://t.me/{{ config.extra.social.telegram }}" aria-label="Telegram" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i></a></li>
+         {% endif %}
+
+         {% if config.extra.social.leetcode %}
+         <li><a class="social-btn" href="{{ config.extra.social.leetcode }}" aria-label="Leetcode" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code"></i></a></li>
+         {% endif %}
+      
          {% if config.extra.social.codepen %}
             <li><a class="social-btn" href="https://codepen.io/{{ config.extra.social.codepen }}" aria-label="CodePen" target="_blank" rel="noopener noreferrer"><i class="nf nf-dev-codepen"></i></a></li>
          {% endif %}
