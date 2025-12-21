@@ -58,7 +58,7 @@ subtitle = false
 
 [extra.home]
 title = "Reza"
-subtitle = "Python Developer"
+subtitle = "Programmer"
 glitch = false
 logo = { enabled = false, height = "100", width = "100" }
 footer = true
